@@ -1,0 +1,8 @@
+.page {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  color: $basic-black;
+}
