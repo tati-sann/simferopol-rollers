@@ -89,7 +89,7 @@ const scriptsBackend = () => {
 
 const fonts = () => {
   return src('./src/fonts/**')
-    .pipe(dest('./app'))
+    .pipe(dest('./app/fonts'))
 }
 
 const images = () => {
@@ -134,7 +134,7 @@ const watchFiles = () => {
 }
 
 const cache = () => {
-  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
+  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2,woff}', {
     base: 'app'})
     .pipe(rev())
     .pipe(revDel())
