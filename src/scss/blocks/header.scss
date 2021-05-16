@@ -1,0 +1,45 @@
+.header {
+  height: 25vh;
+  background-image: url("../img/header-1.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    padding-top: 10vh;
+  }
+
+  &__title {
+    max-width: 50%;
+    color: $basic-white;
+    -webkit-text-stroke: 0.5px $basic-black;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    height: 40vh;
+
+    &__wrapper {
+      padding-top: 20vh;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    height: 60vh;
+
+    &__wrapper {
+      padding-top: 20vh;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+  }
+}
