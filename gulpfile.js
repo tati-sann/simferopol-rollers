@@ -18,6 +18,7 @@ const notify = require('gulp-notify');
 const image = require('gulp-image');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
+const tildeImporter = require("node-sass-tilde-importer");
 
 let isProd = false; // dev by default
 
@@ -39,9 +40,11 @@ const svgSprites = () => {
 }
 
 const styles = () => {
-  return src('./src/scss/**/*.scss')
+  return src('./src/scss/main.scss')
     .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(sass().on("error", notify.onError()))
+    .pipe(sass({
+      importer: tildeImporter
+    }))
     .pipe(autoprefixer({
       cascade: false,
     }))
