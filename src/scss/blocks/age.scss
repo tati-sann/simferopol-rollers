@@ -1,0 +1,16 @@
+.age {
+  &__wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+  }
+
+  &__card {
+
+  }
+}

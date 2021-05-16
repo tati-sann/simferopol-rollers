@@ -7,3 +7,9 @@
     url('#{$font-path}.woff') format('woff');
   }
 }
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  position: $pos;
+  display: $display;
+}
